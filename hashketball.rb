@@ -206,7 +206,7 @@ def big_shoe_rebounds
     section.each do |team_colors_players, stats|
       if team_colors_players == :players
         stats.each do |p|
-          
+          p.max_by { |name, shoe| 
             return p[:rebounds]
           end
         end
