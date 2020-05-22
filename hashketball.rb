@@ -202,7 +202,8 @@ def player_stats(player)
 end
 
 def big_shoe_rebounds
-  all_player_data = game_hash
+  all_player_data = game_hash[:home][:players] + game_hash[:away][:players]
+  
           
           
           
