@@ -205,6 +205,9 @@ def big_shoe_rebounds
   game_hash.each do |team, section|
     section.each do |team_colors_players, stats|
       stats.each do |p|
-        p.max_by
+        if p == shoe_size
+          p.max_by { |k, size| size}
+          
+          
           
         
