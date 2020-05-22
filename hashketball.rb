@@ -203,7 +203,9 @@ end
 
 def big_shoe_rebounds
   game_hash.each do |team, section|
-    section[:players].max_by { |name, shoe| stats[:shoe] }.last[:shoe] 
+    section.each do |team_colors_players, stats|
+      team_colors_players[:players].max_by { |name, shoe| stats[:shoe] }.last[:shoe]
+    end
   end
 end
           
