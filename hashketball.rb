@@ -206,7 +206,9 @@ def big_shoe_rebounds
   
   game_hash.each do |team, section|
     section[:players].each do |player, stats|
-      if stats[:shoe_size] > max_size
+      if size < stats[:shoe_size]
+        stats[:shoe_size] = max_size
+        
           end
         end
       end
