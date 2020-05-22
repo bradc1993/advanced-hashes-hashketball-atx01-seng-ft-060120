@@ -210,13 +210,11 @@ def big_shoe_rebounds
       if max_size < size
         max_size = size
       end
-        end
       if section[:players].has_value?(max_size)
         return stats[:rebounds]
       end
     end
   end
-end
 end
           
           
