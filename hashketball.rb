@@ -202,22 +202,7 @@ def player_stats(player)
 end
 
 def big_shoe_rebounds
-  max_size = nil
-  
-  game_hash.each do |team, section|
-    section[:players].each do |player|
-      player.each do |stat, value|
-      # binding.pry
-        if max_size < stat.fetch[:shoe]
-          max_size = stat.fetch[:shoe]
-        end
-        if player.has_value?(max_size)
-          return stat.fetch[:rebounds]
-        end
-      end
-    end
-  end
-end
+  all_player_data = game_hash
           
           
           
