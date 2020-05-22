@@ -203,7 +203,7 @@ end
 
 def big_shoe_rebounds
   all_player_data = game_hash[:home][:players] + game_hash[:away][:players]
-  all_shoe_sizes_and_rebounds = all_player_data.map{ |_id, player_data| [player_data[:shoe], player_data[:rebounds]] }
+  all_shoe_sizes_and_rebounds = all_player_data.map{ |name, player_data| [player_data[:shoe], player_data[:rebounds]] }
   max_shoe_size_and_rebounds = all_shoe_sizes_and_rebounds.max_by(&:first)
   max_shoe_size_and_rebounds[1]
 end
