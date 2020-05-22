@@ -193,7 +193,6 @@ def player_stats(player)
       if team_colors_players == :players
         stats.each do |p|
           if p[:player_name] == player
-            p.delete(:player_name)
             return p
           end
         end
