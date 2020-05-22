@@ -208,11 +208,11 @@ def big_shoe_rebounds
     section[:players].each do |player|
       player.each do |stat, value|
       # binding.pry
-        if max_size < value[:shoe]
-          max_size = value[:shoe]
+        if max_size < stat.fetch[:shoe]
+          max_size = stat.fetch[:shoe]
         end
         if player.has_value?(max_size)
-          return stat[:rebounds]
+          return stat.fetch[:rebounds]
         end
       end
     end
