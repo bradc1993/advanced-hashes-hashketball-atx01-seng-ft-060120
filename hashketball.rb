@@ -215,7 +215,6 @@ def big_shoe_rebounds
           return stat[:rebounds]
         end
       end
-      binding.pry
     end
   end
 end
