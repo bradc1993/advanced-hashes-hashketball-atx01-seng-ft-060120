@@ -211,6 +211,7 @@ def big_shoe_rebounds
         if max_size < value[:shoe]
           max_size = value[:shoe]
         end
+        binding.pry
         if player.has_value?(max_size)
           return stat[:rebounds]
         end
