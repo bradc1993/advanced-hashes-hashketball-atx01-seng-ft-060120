@@ -189,10 +189,11 @@ end
 def player_stats(player)
   game_hash.each do |team, section|
     section.each do |team_colors_players, stats|
+      binding.pry
       if team_colors_players == :players
         stats.each do |p|
           if p[:player_name] == player
-            stats.except p[:player_name]
+            .except p[:player_name]
           end
         end
       end
