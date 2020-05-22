@@ -205,12 +205,8 @@ def big_shoe_rebounds
   max_size = nil
   
   game_hash.each do |team, section|
-    section[:players].each do 
-    section.each do |team_colors_players, stats|
-      if team_colors_players == :players
-        stats.each do |p|
-          p.max_by { |name, shoe| 
-            return p[:rebounds]
+    section[:players].each do |player, stats|
+      if 
           end
         end
       end
